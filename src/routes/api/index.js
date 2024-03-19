@@ -3,11 +3,10 @@ import express from 'express'
 import regex from './regex'
 import route from './route'
 
-
-let router = express.Router()
+const router = express.Router()
 
 router.use(/^\/regex\/?$/i, regex)
 
 router.use('/route', route)
 
-module.exports = router
+export default router
