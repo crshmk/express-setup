@@ -1,5 +1,5 @@
 Basic express setup
 
-```bash
-git rm --cached .env
+```javascript
+get('http://localhost:1111/route')
 ```
