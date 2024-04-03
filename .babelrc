@@ -6,7 +6,9 @@
     ["module-resolver", {
       "root": ["./"],
       "alias": {
-        "@db": "./src/db"
+        "@app": "./src",
+        "@mw": "./src/mw",
+        "@routes": "./src/routes"
       }
     }]
   ]
