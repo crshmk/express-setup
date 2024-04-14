@@ -31,7 +31,7 @@
   },
   "jest": {
     "testMatch": [
-      "**/?(*.)+(spec|test).[jt]s?(x)"
+      "**/__tests__/*.test.js"
     ],
     "globals": {
       "DB_HOST": "localhost"
