@@ -1,26 +1,11 @@
-import bodyParser from 'body-parser'
-import cookieParser from 'cookie-parser'
-import cors from 'cors'
-import express from 'express'
-import helmet from 'helmet'
+import app from './app'
+import './db'
+import './ws'
 
-import router from './router'
-
-const app = express()
-
-const getRequestBody = bodyParser.json({ limit: '50mb'} )
-const handleCors = cors({ credentials: true, origin: true })
-
-app.use(getRequestBody)
-app.use(cookieParser())
-app.use(helmet())
-app.use(handleCors)
-app.use('/api/v1', router)
-
-const port = 1111 // process.env.PORT
+const port = process.env.API_PORT || 8001
 
 app.listen(port, () => {
-  console.log('service at', port)
+  console.log('api at', port)
 })
 
 export default app
